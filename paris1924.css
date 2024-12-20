@@ -1,0 +1,350 @@
+
+/* Police personnalisée pour le menu de navigation */
+.special-elite-regular {
+    font-family: "Special Elite", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Paris2024'; /* Le nom de la police, tu peux choisir ce que tu veux */
+    src: url('fonts/Paris2024-Variable.ttf') format('truetype'); /* Le chemin vers ton fichier de police */
+    font-weight: normal; /* DÃ©finir l'Ã©paisseur de la police si nÃ©cessaire */
+    font-style: normal; /* DÃ©finir le style (normal, italic, etc.) */
+}
+
+/* Styles pour la barre de navigation */
+nav {
+    background-color: #FFde21; /* Couleur de fond du menu */
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    top: 0; /* Maintient la position lors du défilement */
+    justify-content: space-between;
+    padding: 10px;
+    z-index: 1000; /* Assure que le menu reste au-dessus des autres éléments */
+}
+
+nav ul {
+    list-style-type: none; /* Supprime les puces des listes */
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 15px;
+    position: relative; /* Nécessaire pour les sous-menus */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px; /* Réduit l'espacement */
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+/* Couleurs de survol personnalisées pour les éléments spécifiques */
+nav ul li:nth-child(2) a:hover { background-color: #fefdf0; }
+nav ul li:nth-child(3) a:hover { background-color: #fefdf0; }
+nav ul li:nth-child(4) a:hover { background-color: #fefdf0; }
+nav ul li:nth-child(5) a:hover { background-color: #fefdf0; }
+nav ul li:nth-child(6) a:hover { background-color: #fefdf0; }
+
+/* Styles pour les menus déroulants */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    min-width: 200px; /* Largeur minimum */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+nav ul li:hover .dropdown {
+    display: block; /* Affiche le menu au survol */
+}
+
+.dropdown li {
+    padding: 10px;
+    border-bottom: 1px solid #555; /* Séparateurs entre les items */
+}
+
+.dropdown li:last-child {
+    border-bottom: none; /* Pas de bordure pour le dernier item */
+}
+
+.dropdown li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+/* Effet de survol pour les éléments du menu déroulant */
+.dropdown li a:hover {
+    background-color: #666;
+}
+
+/* Adaptation pour les petits écrans */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+table {
+    font-family: 'Special Elite', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+/*Contenu de la page*/
+
+.gallery {
+    width:1000px;
+    margin:0 auto;
+    column-count:3;
+    columns : gap 15px;
+}
+
+.gallery img {
+    display: block;
+    width:100%;
+    height:auto;
+    margin: 0 0 15px 0;
+    border-radius: 5px;
+}
+
+.gallery img :hover {
+    transform:scale(0.9)
+}
+
+
+iframe{
+    display: block;
+    margin: auto;
+    border-radius: 7px;
+}
+
+img {
+    display: block;
+    margin: auto;
+    border-radius: 7px;
+
+}
+body {
+    font-family: 'Special Elite', system-ui;
+    background-color: #f3e5ab;
+    margin: 20px;
+    color: #333;
+}
+
+h1 {
+    font-family: 'Special Elite', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    color: #0056b3;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.discipline-group1 {
+    background-color: lightblue;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 250px;
+}
+.discipline-group2 {
+    background-color: beige	;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 250px;
+}
+.discipline-group3 {
+    background-color: #fea347	;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 250px;
+}
+.discipline-group4 {
+    background-color: grey;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 250px;
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li{
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: black;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px 20px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #0056b3;
+    color: white;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+caption {
+    margin-bottom: 10px;
+    font-style: italic;
+    color: #555;
+}
+
+h2 {
+    font-family: 'Special Elite', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    padding: 20px;
+    color: #002D62;
+}
+
+h3 {
+    font-family: 'Special Elite', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+p {
+    font-family: 'Special Elite', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0 20px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #002e54	;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+   
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover
+{
+	color: #ffffff;
+	padding-left: 8px;
+}
+	/*responsive*/
+	@media(max-width: 767px){
+		.footer-col{
+			width: 50%;
+			margin-bottom: 30px;
+	}
+	}
+	@media(max-width: 574px){
+		.footer-col{
+			width: 100%;
+	}
+	}
+
+
+@media (max-width:767px) {
+    .gallery {
+        column-count: 2;
+    }
+    .gallery img {
+        object-fit: cover;
+        height: 180px;
+    }
+
+}

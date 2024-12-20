@@ -1,0 +1,240 @@
+@font-face {
+    font-family: 'Paris2024'; 
+    src: url('../fonts/Paris2024-Variable.ttf') format('truetype'); /* Le chemin vers ton fichier de police */
+    font-weight: normal; /* DÃ©finir l'Ã©paisseur de la police si nÃ©cessaire */
+    font-style: normal; /* DÃ©finir le style (normal, italic, etc.) */
+}
+
+nav {
+    background-color: #fff; 
+    display:flex;
+    flex-direction: row;
+    position:sticky;
+    justify-content:space-between;
+    padding: 15px;
+	margin-top: 0px;
+}
+
+nav ul {
+    list-style-type: none; 
+    display:flex; 
+    justify-content: space-around; 
+    position: relative; /*dropdown*/
+}
+
+nav ul li {
+    padding: 15px; 
+    position: relative; /* dropdown */
+}
+
+nav ul li a {
+    text-decoration: none; 
+    color: black; 
+    padding: 30px 30px; 
+    border-radius: 50px; 
+    transition: background-color 0.3s ease; 
+}
+
+nav ul li:nth-child(2) a:hover {
+    background-color: #74d0f1; 
+}
+
+nav ul li:nth-child(3) a:hover {
+    background-color: #74d0f1; 
+}
+
+nav ul li:nth-child(4) a:hover {
+    background-color: #74d0f1; 
+}
+
+nav ul li:nth-child(5) a:hover {
+    background-color: #74d0f1; 
+}
+
+nav ul li:nth-child(6) a:hover {
+    background-color: #74d0f1; 
+}
+
+/* Dropdown styles */
+.dropdown {
+    display: none; 
+    position: absolute; 
+    top: 100%; 
+    left: 0; 
+    background-color: #444; 
+}
+
+nav ul li:hover .dropdown {
+    display: block; 
+}
+
+.dropdown li {
+    padding: 10px; 
+}
+
+/* Dropdown item hover effect */
+.dropdown li a:hover {
+    background-color: #666; 
+}
+
+
+.paris2024 {
+    font-family: 'Paris2024';
+}
+
+body { 
+    font-family:'Paris2024';
+    src: url('../fonts/Paris2024-Variable.ttf') format('truetype');
+    font-weight: 600;
+    background-color: #fff;
+    padding : 2em;
+    margin: 20px;
+}
+
+h1 {
+
+     margin:0 0 1em 0;
+     padding:0;
+     text-align:center;
+     font-size:2.5em;
+}
+
+.gallery {
+    width:1000px;
+    margin:0 auto;
+    column-count:3;
+    columns : gap 15px;
+
+}
+
+.gallery img {
+    display: block;
+    width:100%;
+    height:auto;
+    margin: 0 0 15px 0;
+    border-radius: 5px;
+}
+ 
+.gallery img :hover {
+    transform:scale(0.9)
+}
+
+@media (max-width:767px) {
+    .gallery {
+        column-count: 2;
+    }
+    .gallery img {
+        object-fit: cover;
+        height: 180px;
+    }
+
+}
+
+/* Pour les très petits écrans comme les téléphones en mode portrait */
+@media (max-width: 480px) {
+    .gallery {
+        column-count: 1; /* Passer à une seule colonne sur les très petits écrans */
+    }
+
+    .gallery img {
+        height: auto; /* Laisser les images s'adapter à leur taille naturelle */
+    }
+
+    h1 {
+        font-size: 1.8em; /* Réduire davantage la taille du titre */
+    }
+}
+
+/*Footer*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #002e54	;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+	/*responsive*/
+	@media(max-width: 767px){
+		.footer-col{
+			width: 50%;
+			margin-bottom: 30px;
+	}
+	}
+	@media(max-width: 574px){
+		.footer-col{
+			width: 100%;
+	}
+	}
+
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align */
+    }
+
+    nav ul li {
+        width: 100%; /* Full width for items */
+        text-align: left; /* Center text */
+    }
+}
